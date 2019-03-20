@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="305dp"
+        android:layout_marginTop="14dp"
+        android:paddingTop="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/level1"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/text_audio_speech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/Audio_Speech"
+                android:textSize="20dp" />
+
+            <Switch
+                android:id="@+id/switch_audio_speech"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:paddingLeft="140dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/level2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/level1"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:id="@+id/text_allow_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/switch_text_display"
+                android:layout_alignParentStart="true"
+                android:lines="1"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/Text_Display"
+                android:textSize="20dp" />
+
+            <Switch
+                android:id="@+id/switch_text_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="148dp"
+                android:paddingTop="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/level3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/level2">
+
+            <TextView
+                android:id="@+id/text_distance_filtering"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/text_allow_display"
+                android:paddingLeft="10dp"
+                android:paddingTop="20dp"
+                android:text="@string/Distance_filter"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/level4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/level3">
+
+            <TextView
+                android:id="@+id/text_distance_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/text_distance_filtering"
+                android:paddingLeft="10dp"
+                android:text="@string/Distance_description"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/level5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/level4">
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/text_distance_description"
+                android:max="100"
+                android:progress="50" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/level5">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="20dp"
+
+                android:text="0.5km"
+                android:textSize="15dp" />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:paddingLeft="120dp"
+
+                android:text="5km"
+                android:textSize="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:paddingLeft="120dp"
+                android:text="10km"
+                android:textSize="15dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2"
+        app:menu="@menu/navigation" />
+
+</android.support.constraint.ConstraintLayout>

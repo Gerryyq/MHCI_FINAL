@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MHCI4</string>
+    <string name="action_settings">Settings</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Settings</string>
+    <string name="info">Info</string>
+    <string name="Sample_String_1">18/03/19 \nWoodlands \n3.4km \t10:04am</string>
+    <string name="Sample_String_2">12/03/19 \nYishun \n5.4km \t09:14am</string>
+    <string name="Sample_String_3">05/03/19 \nChua Chu Kang \n8.4km \t17:40pm</string>
+    <string name="Sample_String_4">25/02/19 \nYishun \n7.5km \t20:30pm</string>
+    <string name="Sample_String_5">16/02/19 \nSembawang \n8.4km \t11:00am</string>
+    <string name="Audio_Speech">Audio Speech Alert</string>
+    <string name="Text_Display">Allow Text Display</string>
+    <string name="Distance_filter">Distance Filtering</string>
+    <string name="Distance_description">Set the max distance for the information shown</string>
+    <string name="faq">Frequently Asked Questions:</string>
+    <string name="faq_2"><u>Why is my camera not displaying on screen?</u></string>
+
+    <string name="please_turn_on_gps">Please turn on location service</string>
+    <string name="cancel">Cancel</string>
+    <string name="open_location_settings">Open location setting</string>
+
+    <string name="permission_necessary">Permission not granted</string>
+</resources>

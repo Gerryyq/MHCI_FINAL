@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="0dp"
+        android:layout_height="542dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/text_totalDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="10.4"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/text_fixed_totalDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_totalDistance"
+            android:layout_centerHorizontal="true"
+            android:text="Total Distance(Km)"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/text_averageDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_fixed_totalDistance"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="30dp"
+            android:text="5.2"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/text_fixed_averageDistance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_averageDistance"
+            android:layout_marginLeft="50dp"
+            android:text="Avg. Distance(Km)"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/text_averageSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_fixed_totalDistance"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/text_averageDistance"
+            android:text="8.9"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/text_fixed_averageSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_averageSpeed"
+            android:layout_marginLeft="220dp"
+            android:text="Avg. Speed(Km/h)"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_fixed_averageSpeed"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_fixed_averageDistance"
+                    android:text="MARCH 2019"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_fixed_averageDistance"
+                    android:drawableLeft="@drawable/navi_home"
+                    android:lines="3"
+                    android:text="@string/Sample_String_1"
+                    android:textSize="15dp" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_fixed_averageDistance"
+                    android:drawableLeft="@drawable/navi_home"
+                    android:lines="3"
+                    android:text="@string/Sample_String_2"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:id="@+id/text_lastRide"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_fixed_averageDistance"
+                    android:drawableLeft="@drawable/navi_home"
+                    android:lines="3"
+                    android:text="@string/Sample_String_3"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_lastRide"
+                    android:text="February 2019"
+                    android:textSize="20dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_fixed_averageDistance"
+                    android:drawableLeft="@drawable/navi_home"
+                    android:lines="3"
+                    android:text="@string/Sample_String_4"
+                    android:textSize="15dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_fixed_averageDistance"
+                    android:drawableLeft="@drawable/navi_home"
+                    android:lines="3"
+                    android:text="@string/Sample_String_5"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="0dp"
+        android:layout_marginStart="0dp"
+        android:background="@color/black"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/navigation" />
+</android.support.constraint.ConstraintLayout>
